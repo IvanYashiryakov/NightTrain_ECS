@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public struct MovebleComponent
+public struct MovableComponent
 {
     public CharacterController CharacterController;
     public float Speed;

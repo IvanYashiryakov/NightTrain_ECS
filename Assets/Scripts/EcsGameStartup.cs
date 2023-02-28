@@ -1,4 +1,3 @@
-using System.Collections;
 using Leopotam.Ecs;
 using Voody.UniLeo;
 using UnityEngine;
@@ -42,8 +41,16 @@ public class EcsGameStartup : MonoBehaviour
     private void AddSystems()
     {
         _systems.
-            Add(new PlayerInputSystem()).
-            Add(new MovementSystem());
+            Add(new CursorLockSystem()).
+            Add(new PlayerMovableInputSystem()).
+            Add(new PlayerMouseInputSystem()).
+            Add(new MovementSystem()).
+            Add(new PlayerMouseLookSystem()).
+            Add(new GroundCheckSystem()).
+            Add(new PlayerJumpSendEventSystem()).
+            Add(new PlayerJumpSystem()).
+            Add(new GravitySystem())
+            ;
     }
 
     private void AddInjections()
@@ -53,6 +60,6 @@ public class EcsGameStartup : MonoBehaviour
 
     private void AddOneFrames()
     {
-
+        _systems.OneFrame<JumpEvent>();
     }
 }

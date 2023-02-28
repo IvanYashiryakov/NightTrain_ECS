@@ -1,9 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Voody.UniLeo;
 
-public class PlayerTagProvider : MonoProvider<PlayerTag>
-{
-    
-}
+public class PlayerTagProvider : MonoProvider<PlayerTag> { }

@@ -1,9 +1,7 @@
 using Leopotam.Ecs;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class PlayerInputSystem : IEcsRunSystem
+public sealed class PlayerMovableInputSystem : IEcsRunSystem
 {
     private readonly EcsFilter<PlayerTag, DirectionComponent> _directionFilter = null;
 
