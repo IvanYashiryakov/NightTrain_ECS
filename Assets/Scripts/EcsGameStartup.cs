@@ -49,7 +49,8 @@ public class EcsGameStartup : MonoBehaviour
             Add(new GroundCheckSystem()).
             Add(new PlayerJumpSendEventSystem()).
             Add(new PlayerJumpSystem()).
-            Add(new GravitySystem())
+            Add(new GravitySystem()).
+            Add(new EnemySpawnSystem())
             ;
     }
 
